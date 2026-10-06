@@ -51,15 +51,15 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </nav>
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-nav">
-        <div class="close-btn"><i class="fas fa-times"></i></div>
+    <div id="mobile-navigation" class="mobile-nav" aria-hidden="true">
+        <button class="close-btn" type="button" aria-label="Close navigation menu"><i class="fas fa-times"></i></button>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -201,68 +201,95 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-right">03. <span class="highlight">Featured Projects</span>
-                </h2>
+                <div class="projects-heading" data-aos="fade-right">
+                    <h2 class="section-title">03. <span class="highlight">Featured Projects</span></h2>
+                    <p>A selection of websites and digital experiences I’ve designed and developed.</p>
+                </div>
 
-                <div class="projects-wrapper">
-                    <!-- Project 1 -->
-                    <div class="project-card glass-panel" data-aos="fade-up">
-                        <div class="project-image">
-                            <div class="mockup-screen">
-                                <!-- Replace this src link with the file path to your own image (e.g. assets/task-manager.png) -->
-                                <img src="c:\Users\Parth\OneDrive\Pictures\Screenshots 1\Screenshot 2026-02-18 143046.png"
-                                    alt="Task Manager" class="project-cover-img">
+                <div class="projects-grid">
+                    <article class="project-card glass-panel" data-aos="fade-up">
+                        <div class="project-preview project-preview-ai" aria-hidden="true">
+                            <div class="preview-window">
+                                <div class="preview-bar">
+                                    <span></span><span></span><span></span>
+                                    <i class="fas fa-sparkles"></i>
+                                </div>
+                                <div class="preview-content">
+                                    <div class="preview-sidebar">
+                                        <i class="fas fa-grid"></i>
+                                        <i class="fas fa-chat"></i>
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="preview-main">
+                                        <p>AI WORKSPACE</p>
+                                        <h4>What can I help you build?</h4>
+                                        <div class="preview-prompt"><span>Ask anything...</span><i class="fas fa-arrow-right"></i></div>
+                                        <div class="preview-cards"><span></span><span></span><span></span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <div class="project-badge">Web App</div>
-                            <h3 class="project-title">Task Manager Website</h3>
-                            <p class="project-desc">A highly interactive to-do and project management application
-                                featuring drag-and-drop task boards, dark mode support, and local storage integration.
-                                Built with focus on usability, fast performance, GSAP animations, and scalable
-                                architecture.</p>
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                            <div class="project-meta"><span>WEB DEVELOPMENT</span><span>01</span></div>
+                            <h3 class="project-title">AI-Powered Web Application</h3>
+                            <p class="project-desc">An AI-powered web application designed with a modern and interactive user interface. The project demonstrates the integration of AI capabilities with a responsive web experience, focusing on usability, clean design, and smooth user interaction.</p>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>AI Integration</span><span>Responsive Web Design</span>
                             </div>
-                            <div class="project-links">
-                                <a href="#" class="btn btn-outline hover-glow btn-sm"><i class="fab fa-github"></i>
-                                    GitHub</a>
-                                <a href="#" class="btn btn-primary hover-glow btn-sm"><i
-                                        class="fas fa-external-link-alt"></i> Live Demo</a>
-                            </div>
+                            <a href="https://playful-zabaione-26cbb7.netlify.app/" class="btn btn-primary hover-glow btn-sm" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> View Live Demo →</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 2 -->
-                    <div class="project-card glass-panel reverse" data-aos="fade-up">
+                    <article class="project-card glass-panel" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-preview project-preview-tailor" aria-hidden="true">
+                            <div class="preview-window">
+                                <div class="preview-bar">
+                                    <span></span><span></span><span></span>
+                                    <i class="fas fa-scissors"></i>
+                                </div>
+                                <div class="preview-content tailor-layout">
+                                    <div class="tailor-brand"><i class="fas fa-star"></i><strong>PREMVATI</strong><small>LADIES TAILOR</small></div>
+                                    <div class="tailor-copy"><span>DESIGN • FIT • FINEST</span><h4>Made for your<br>beautiful moments.</h4></div>
+                                    <div class="tailor-dress"><i class="fas fa-female"></i></div>
+                                    <div class="tailor-offer">NEW SEASON<br><strong>20% OFF</strong></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="project-info">
-                            <div class="project-badge">E-Commerce</div>
-                            <h3 class="project-title">Car Rental Website</h3>
-                            <p class="project-desc">A premium car rental platform bringing a luxurious UI experience.
-                                Features include advanced search filters, responsive layout, reservation forms, and
-                                seamless 3D-like hover animations to elevate the user journey and conversion rates.</p>
-                            <div class="project-tech">
-                                <span>React</span>
-                                <span>CSS</span>
-                                <span>Firebase</span>
+                            <div class="project-meta"><span>CLIENT PROJECT</span><span>02</span></div>
+                            <h3 class="project-title">Premvati Ladies Tailor — Business Website</h3>
+                            <p class="project-desc">A professional business website created for Premvati Ladies Tailor. The website showcases tailoring services, dress and western-wear designs, categories, offers, and customer-focused information in a clean and responsive layout.</p>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Web Design</span><span>Vercel</span>
                             </div>
-                            <div class="project-links">
-                                <a href="#" class="btn btn-outline hover-glow btn-sm"><i class="fab fa-github"></i>
-                                    GitHub</a>
-                                <a href="https://rentwheels.oneapp.dev/" class="btn btn-primary hover-glow btn-sm"><i
-                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://premvatitailors2000.vercel.app/" class="btn btn-primary hover-glow btn-sm" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> View Live Demo →</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-preview project-preview-patisserie" aria-hidden="true">
+                            <div class="preview-window">
+                                <div class="preview-bar">
+                                    <span></span><span></span><span></span>
+                                    <i class="fas fa-bread-sweet"></i>
+                                </div>
+                                <div class="preview-content patisserie-layout">
+                                    <div class="patisserie-copy"><small>HANDCRAFTED WITH LOVE</small><h4>Artisan<br>Pastries</h4><span>Made in Mumbai</span></div>
+                                    <div class="patisserie-art"><i class="fas fa-cake"></i><span>ADORE</span></div>
+                                    <div class="patisserie-products"><i></i><i></i><i></i></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-image">
-                            <div class="mockup-screen">
-                                <!-- Replace this src link with the file path to your own image (e.g. assets/car-rental.png) -->
-                                <img src="c:\Users\Parth\OneDrive\Pictures\Screenshots 1\Screenshot 2026-02-17 162651.png"
-                                    alt="Car Rental" class="project-cover-img">
+                        <div class="project-info">
+                            <div class="project-meta"><span>CLIENT PROJECT</span><span>03</span></div>
+                            <h3 class="project-title">Adore Mumbai — Artisanal Patisserie Website</h3>
+                            <p class="project-desc">A premium website concept created for Adore Mumbai, an artisanal patisserie. The project focuses on creating an elegant brand experience through a visually appealing interface, product presentation, clear navigation, and responsive design.</p>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Web Design</span><span>UI/UX</span>
                             </div>
+                            <a href="https://adore-mumbai-artisanal-patisserie-569000200907.asia-southeast1.run.app/" class="btn btn-primary hover-glow btn-sm" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> View Live Demo →</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
