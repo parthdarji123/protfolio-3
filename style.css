@@ -394,28 +394,83 @@ footer { border-top: 1px solid var(--glass-border); padding: 3rem 0; background:
     .contact-wrapper { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
+    .container { padding-inline: 1.25rem; }
     .nav-links { display: none; }
     .menu-toggle { display: block; }
+    .navbar { height: 68px; }
+    header.scrolled .navbar { height: 62px; }
+    .logo { font-size: 1.55rem; }
+    .hero { min-height: 100svh; padding-top: 6.5rem; padding-bottom: 4rem; }
     .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-content { width: 100%; }
     .hero-graphic { display: none; }
-    .hero-btns { justify-content: center; }
-    .name { font-size: 3rem; }
-    .section { padding: 4rem 0; }
+    .greeting { font-size: 0.78rem; letter-spacing: 2px; }
+    .name { font-size: clamp(2.65rem, 12vw, 4rem); }
+    .title { font-size: 1.35rem; }
+    .description { margin-inline: auto; font-size: 0.95rem; }
+    .hero-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; max-width: 520px; margin-inline: auto; }
+    .hero-btns .btn { width: 100%; padding-inline: 0.8rem; font-size: 0.72rem; }
+    .section { padding: 4.5rem 0; }
+    .section-title { margin-bottom: 2.25rem; font-size: 2rem; }
+    .about-content { grid-template-columns: 1fr; gap: 2rem; padding: 1.25rem; }
+    .about-text p { font-size: 0.95rem; }
+    .about-stats { justify-content: space-between; gap: 0.75rem; }
+    .stat-item h3 { font-size: 2rem; }
+    .stat-item span { font-size: 0.72rem; }
+    .image-wrapper { width: 190px; height: 190px; }
+    .profile-icon { font-size: 5.5rem; }
+    .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .skill-card { padding: 1.25rem 1rem; }
+    .skills-grid .skill-card:nth-child(n + 5) { grid-column: span 1; }
     .projects-grid { grid-template-columns: 1fr; }
     .project-card:last-child { grid-column: auto; width: 100%; }
     .project-card { max-width: 620px; margin: 0 auto; }
+    .project-preview { aspect-ratio: 16 / 9; }
+    .project-info { padding: 1.25rem; }
+    .project-title { font-size: 1.25rem; }
+    .project-desc { font-size: 0.9rem; line-height: 1.65; }
+    .project-tech { font-size: 0.62rem; }
+    .project-info .btn { min-height: 48px; width: 100%; }
+    .contact-wrapper { gap: 2.5rem; }
+    .contact-form { padding: 1.5rem; }
+    .method-item { padding: 1.2rem; }
+    .method-item a, .method-item span { font-size: 0.9rem; }
+    .form-control { font-size: 1rem; }
+    .social-links { gap: 1rem; }
+    .social-icon { width: 46px; height: 46px; }
+    .back-to-top { right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); width: 48px; height: 48px; }
     .scroll-indicator { display: none; }
     .cursor-dot, .cursor-outline { display: none; }
     * { cursor: auto; }
+    .project-card:hover { transform: none; }
+    .project-card:hover .preview-window { transform: none; }
 }
 @media (max-width: 480px) {
-    .container { padding: 0 1rem; }
-    .section-title { font-size: 2rem; }
+    .container { padding-inline: 1rem; }
+    .section-title { font-size: 1.85rem; }
     .projects-heading { margin-bottom: 2rem; }
-    .project-info { padding: 1.25rem; }
-    .project-title { font-size: 1.2rem; }
-    .project-tech { gap: 0.4rem; }
+    .about-stats { gap: 0.45rem; }
+    .stat-item h3 { font-size: 1.75rem; }
+    .stat-item span { letter-spacing: 0.5px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .skill-card { padding: 1.25rem; }
+    .project-meta { font-size: 0.62rem; }
+    .project-tech { gap: 0.35rem; }
+    .project-tech span { padding: 0.3rem 0.4rem; }
     .project-preview { aspect-ratio: 4 / 3; }
+    .preview-main { padding: 0.9rem 0.75rem; }
+    .preview-main h4 { font-size: 0.72rem; }
+    .preview-sidebar { width: 30px; flex-basis: 30px; }
     .tailor-dress { right: 10%; width: 60%; }
     .patisserie-art { right: 18%; width: 48%; }
+    .contact-form { padding: 1.25rem; }
+    .method-item { align-items: flex-start; }
+    .method-icon { width: 46px; height: 46px; flex: 0 0 46px; }
+}
+@media (max-width: 360px) {
+    .hero-btns { grid-template-columns: 1fr; }
+    .about-stats { flex-wrap: wrap; }
+    .stat-item { width: calc(50% - 0.5rem); }
+    .project-meta { align-items: flex-start; }
+    .project-meta span:last-child { font-size: 0.58rem; }
 }
